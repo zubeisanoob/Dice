@@ -1,18 +1,20 @@
 Die bob;
 void setup()
   {
-    
     size(300, 300);
-    
     noLoop();
   }
 void draw()
   {
-    background(200);
-    for (int y = 15; y <= 180; y+=65) {
-      for (int x = 5; x <= 180; x+=60) {
+    background(255, 204, 0);
+    fill(0);
+    textSize(26);
+    text("Dice Mania!", 70, 30);
+    for (int y = 50; y <= 205; y+=65) {
+      for (int x = 60; x <= 205; x+=60) {
         bob = new Die(x, y + 2);
         fill(0);
+        textSize(12);
         text("Roll: " + bob.face, x + 7, y);
         bob.show();
       }
